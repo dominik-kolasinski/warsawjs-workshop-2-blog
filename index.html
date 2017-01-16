@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="add-post"></div>
+
+    <div id="display-post"></div>
+
+</body>
+
+<script type="text/html" id="template-post-add-dom-component">
+    <section>
+        <h1>add post</h1>
+        <form id="add-post-form">
+            post title:
+            <input type="text" name="post-title"><br>
+            post body:<br>
+            <textarea rows="10" cols="50" name="post-body"></textarea>
+            <input id="submit-form-button" type="submit" value="submit">
+        </form>
+    </section>
+</script>
+
+<script type="text/html" id="template-post-component">
+    <section>
+        <a href="#!/post/{{id}}"><h1>{{post-title}}</h1></a>
+        <p>{{post-body}}</p>
+    </section>
+</script>
+
+<script src="http://wzrd.in/standalone/uuid@latest"></script>
+<script src="/node_modules/grapnel/dist/grapnel.min.js"></script>
+<script src="/node_modules/super-event-emitter/dist/super-event-emitter.js"></script>
+<script src="/node_modules/mustache/mustache.js"></script>
+
+<script src="scripts/namespace.js"></script>
+<script src="/scripts/components/post-add-form-component.js"></script>
+<script src="/scripts/components/post-component.js"></script>
+<script src="/scripts/models/post-list-model.js"></script>
+<script src="/scripts/models/post-model.js"></script>
+<script src="/scripts/controllers/post-controller.js"></script>
+<script src="scripts/main.js"></script>
+
+</html>
